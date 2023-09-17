@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <title>J-Query</title>
+    <style>
+        div {
+            width: 100%;
+            height: 300px;
+            background-color: aquamarine;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #p {
+
+            font-size: 100px;
+            font-family: lucida handwriting;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+
+    <button id="toggle">Toggle</button>
+
+    <p>This is also a paragraph</p>
+    <p id="para1">This is a paragraph</p>
+
+    <button id="slideup">Slide UP</button>
+    <button id="slidedown">Slide Down</button>
+    <button id="slidetoggle">Slide Toggle</button>
+    <div id="div">
+        <p id="p">This is a paragraph</p>
+    </div>
+
+
+    <script>
+        $('#hide').click(function () {
+            $('#para1').hide();
+        })
+        $('#show').click(function () {
+            $('#para1').show();
+        })
+        $('#toggle').click(function () {
+            $('#para1').toggle();
+        })
+
+        $(document).ready(function () {
+            $('#slideup').click(function () {
+                $('#div').slideup();
+            })
+            $('#slidedown').click(function () {
+                $('#div').slidedown();
+            })
+            $('#slidetoggle').click(function () {
+                $('#div').slidetoggle();
+            })
+        })
+    </script>
+</body>
+
+</html>
